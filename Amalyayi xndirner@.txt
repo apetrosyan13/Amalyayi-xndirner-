@@ -1,0 +1,76 @@
+Mijin Tvabanakan.
+function mijinTvabanakan(arr){
+  var sum = 0;
+  var amaunt = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      amaunt++;
+      sum += arr[i];
+    }
+  }
+  return sum/amaunt;
+}
+console.log(mijinTvabanakan([-4,3,2,4,-8]));
+
+Gaxtniq.
+function gaxtniq(arr){
+  var result = 0;
+  for (var i = 0; i < arr.length; i++) {
+     result += arr[i]**2;
+  }
+  return result;
+}
+console.log(gaxtniq([-4,3,2,4,-8]));
+
+Usucchi ton.
+function minAndMax (arr) {
+  var result = Math.min.apply(null,arr) + Math.max.apply(null,arr);
+  return result;
+}
+console.log(minAndMax([4,1,9,3,24,8,0.5]))
+
+Xmbi @ntrutyun.
+var a = [5, 7, 1, -8, -9, 3];
+function maxProduct(arr) {
+  var result = -Infinity;
+  for (var i = 0; i < arr.length - 1; i++) {
+    result = (arr[i] * arr[i + 1] > result)? arr[i] * arr[i + 1]: result;
+  }
+  return result;
+}
+console.log(maxProduct(a));
+
+Electronayin Post.
+var a = "apetrosyan13@mail.ru";
+var b = "zukenberg_aca@@gmail.com";
+var c = "snt.Nikol@yahoo.com";
+var d = "anjik(brad) 1984@yandex.ru";
+function acceptMails(str) {
+  var acc = true;
+  var x = 1;
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] === "@") {
+      x -= 1;
+    }
+  }
+    if (str.includes(" ") || str.includes("(") || str.includes(")") || str.includes("/")) {
+      acc = false;
+    }
+    if ( str.includes("@") && str.includes(".")){
+      if (str.indexOf("@") > str.indexOf(".")) {
+        acc = false;
+      }
+    }
+  if (x < 0) {
+    acc = false;
+  }
+  if (acc === true) {
+    return "email accepted";
+  } else {
+  return "email isn't accepted"
+  }
+}
+console.log(acceptMails(a));
+console.log(acceptMails(b));
+console.log(acceptMails(c));
+console.log(acceptMails(d));
